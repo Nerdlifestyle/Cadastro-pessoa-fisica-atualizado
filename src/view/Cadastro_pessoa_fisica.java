@@ -51,6 +51,7 @@ import javax.swing.text.MaskFormatter;
 			JFormattedTextField cpf2 = null;
 			MaskFormatter cep = null;
 			JFormattedTextField cep2 = null;
+			model.Cadastro_pessoa_fisica Cadastro_pessoa_fisica = new model.Cadastro_pessoa_fisica();
 				public Cadastro_pessoa_fisica(){
 					super("Cadastro"); 
 						this.setSize(390,800); 
@@ -89,6 +90,26 @@ import javax.swing.text.MaskFormatter;
 						t10.setBounds(20 ,520 ,200 , 30);
 						paine.add(b1);
 						b1.setBounds(20, 640, 100, 30);
+						b1.addActionListener(new ActionListener(){
+							public void ActionPerformed(ActionEvent e){
+								Cadastro_pessoa_fisica.setNome(v1.getText());
+								Cadastro_pessoa_fisica.setEnde(v2.getText());
+								Cadastro_pessoa_fisica.setBairro(v3.getText());
+								Cadastro_pessoa_fisica.setCep(cep2.getText());
+								Cadastro_pessoa_fisica.setCidade(v5.getText());
+								Cadastro_pessoa_fisica.setTel(txttel.getText());
+								Cadastro_pessoa_fisica.setCel(tel2.getText());
+								Cadastro_pessoa_fisica.setRG(rg2.getText());
+								Cadastro_pessoa_fisica.setCPF(cpf2.getText());
+							
+							}
+
+							@Override
+							public void actionPerformed(ActionEvent arg0) {
+								// TODO Auto-generated method stub
+								
+							}
+						});
 						paine.add(te1);
 						te1.setBounds(80 ,20 ,200 , 30);
 						paine.add(b2);
